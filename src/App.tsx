@@ -5,6 +5,7 @@ import AppLayout from "./pages/AppLayout/AppLayout";
 import Alarms from "./pages/Alarms/Alarms";
 import Phrases from "./pages/Phrases/Phrases";
 import Register from "./pages/Register/Register";
+import RegisterAll from "./pages/RegisterAll/RegisterAll";
 import { FakeAuthProvider } from "./contexts/FakeAuthContext";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="registerall" element={<RegisterAll/>} />
           <Route
             path="/"
             element={
