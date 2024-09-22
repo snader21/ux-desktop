@@ -36,7 +36,7 @@
 
 .boton {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   padding: 12px;
   font-size: 16px;
@@ -45,41 +45,41 @@
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  width: 100%; 
+  width: 100%;
   max-width: 240px;
   text-align: center;
-  position: relative; 
+  position: relative;
 }
 
 .boton i {
   position: absolute;
-  left: 40px; 
-  font-size: 18px; 
+  left: 40px;
+  font-size: 18px;
   display: flex;
   align-items: center;
 }
 
 .boton span {
   flex-grow: 1;
-  text-align: center; 
+  text-align: center;
   display: flex;
   align-items: center;
 }
 
 .google {
-  background-color: #0A3AA3; 
+  background-color: #0A3AA3;
 }
 
 .microsoft {
-  background-color: #0A3AA3; 
+  background-color: #0A3AA3;
 }
 
 .meta {
-  background-color: #0A3AA3; 
+  background-color: #0A3AA3;
 }
 
 .correo {
-  background-color: #0A3AA3; 
+  background-color: #0A3AA3;
 }
 
 .boton i {
