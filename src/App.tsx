@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import ProtectedRoute from "./pages/ProtectedRoute/ProtectedRoute";
 import AppLayout from "./pages/AppLayout/AppLayout";
-import Alarms from "./pages/Alarms/Alarms";
+import AlarmList from "./pages/Alarms/AlarmList";
 import Phrases from "./pages/Phrases/Phrases";
 import Register from "./pages/Register/Register";
 import RegisterAll from "./pages/RegisterAll/RegisterAll";
@@ -16,6 +16,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="registerall" element={<RegisterAll/>} />
+          <Route path="alarms" element={<AlarmList/>} />
           <Route
             path="/"
             element={
@@ -24,7 +25,7 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<Alarms />} />
+            <Route index element={<AlarmList />} />
             <Route path="phrases" element={<Phrases />} />
           </Route>
         </Routes>
