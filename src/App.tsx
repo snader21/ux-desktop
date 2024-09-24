@@ -17,6 +17,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="registerall" element={<RegisterAll/>} />
           <Route path="alarms" element={<AlarmList/>} />
+          <Route path="phrases" element={<Phrases />} />
           <Route
             path="/"
             element={
@@ -25,8 +26,7 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<AlarmList />} />
-            <Route path="phrases" element={<Phrases />} />
+          <Route index element={<AlarmList />} />
           </Route>
         </Routes>
       </BrowserRouter>
