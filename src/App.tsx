@@ -7,6 +7,7 @@ import Phrases from "./pages/Phrases/Phrases";
 import Register from "./pages/Register/Register";
 import RegisterAll from "./pages/RegisterAll/RegisterAll";
 import { FakeAuthProvider } from "./contexts/FakeAuthContext";
+import {PhrasesProvider} from "./contexts/PhrasesContext";
 
 function App() {
   return (
@@ -17,7 +18,14 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="registerall" element={<RegisterAll/>} />
           <Route path="alarms" element={<AlarmList/>} />
-          <Route path="phrases" element={<Phrases />} />
+          <Route
+            path="phrases"
+            element={
+              <PhrasesProvider>
+                <Phrases />
+              </PhrasesProvider>
+            }
+          />
           <Route
             path="/"
             element={

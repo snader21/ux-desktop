@@ -1,9 +1,9 @@
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import styles from './Phrases.module.scss';
+import { usePhrases } from '../../contexts/PhrasesContext';
 
 function Phrases() {
-  const userPhrase = "Despierta y brilla, el mundo te espera";
-  const systemPhrase = "El esfuerzo de hoy es el éxito del mañana";
+  const { phrases } = usePhrases(); 
 
   return (
     <div className={styles['motivational-container']}>
@@ -15,27 +15,20 @@ function Phrases() {
       </header>
 
       <div className={styles['phrases-container']}>
-        <div className={styles['phrase-card']}>
-          <div className={styles['phrase-header']}>
-            <h2>Frase del usuario</h2>
-            <div className={styles.icons}>
-              <FaEdit className={styles.icon} />
-              <FaTrash className={styles.icon} />
+        {phrases.map((phrase) => (
+          <div key={phrase.id} className={styles['phrase-card']}>
+            <div className={styles['phrase-header']}>
+              <h2>{phrase.type === 'user' ? 'Frase del usuario' : 'Frase del sistema'}</h2>
+              <div className={styles.icons}>
+                <FaEdit className={styles.icon} />
+                <FaTrash className={styles.icon} />
+              </div>
             </div>
-          </div>
-          <div className={styles['phrase-content']}>
-            <p>{userPhrase}</p>
-          </div>
-        </div>
-
-        <div className={styles['phrase-card']}>
-          <div className={styles['phrase-system-header']}>
-            <h2>Frase del sistema</h2>
             <div className={styles['phrase-content']}>
-              <p>{systemPhrase}</p>
+              <p>{phrase.text}</p>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
