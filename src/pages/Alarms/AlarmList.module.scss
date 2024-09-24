@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  color: #0A3AA3;
+  font-weight: bold;
+}
+
+.crearAlarma {
+  background-color: #0A3AA3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alarmasContainer {
+  display: flex;
+  justify-content: space-between;
+}

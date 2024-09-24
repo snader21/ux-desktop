@@ -1,0 +1,68 @@
+.card {
+  background-color: #C2EDFF;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  font-size: 36px;
+  color: #0A3AA3;
+  margin: 0;
+}
+
+.period {
+  font-size: 18px;
+  color: #0A3AA3;
+  margin-left: 5px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  color: #0A3AA3;
+  cursor: pointer;
+}
+
+.dias {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dia {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #0A3AA3;
+  font-weight: bold;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.botonCategoria {
+  background-color: #0A3AA3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+}
