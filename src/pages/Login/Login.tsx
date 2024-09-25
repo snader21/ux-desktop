@@ -30,7 +30,7 @@ export default function Login() {
     e.preventDefault();
     if (!isFormValid) return;
     const result = login(email, password);
-    if (!result) dispatchToast("Credenciales incorrectas", "danger");
+    if (!result) dispatchToast("Email o contraseña incorrectos", "danger");
   }
 
   useEffect(() => {
