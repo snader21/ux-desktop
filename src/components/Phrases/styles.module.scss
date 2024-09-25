@@ -1,0 +1,85 @@
+.form {
+  &-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-title {
+    font-size: 24px;
+    color: #0a3aa3;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #0a3aa3;
+    border-radius: 3px;
+    color: #0a3aa3;
+    font-size: 14px;
+    transition: border 0.2s;
+
+    &::placeholder {
+      color: #c2edff;
+    }
+
+    &:focus {
+      outline: none;
+      border: 5px solid #0a3aa3;
+      border-radius: 10px;
+      padding: 4px;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  &-cancel-button,
+  &-add-button {
+    border: 2px solid #0a3aa3;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: #c2edff;
+      color: #0a3aa3;
+    }
+  }
+
+  &-cancel-button {
+    background-color: #fff;
+    color: #0a3aa3;
+  }
+
+  &-add-button {
+    background-color: #0a3aa3;
+    color: #fff;
+
+    &--disabled {
+      background-color: #b7c1d5;
+      cursor: not-allowed;
+      border: 2px solid #b7c1d5;
+
+      &:hover {
+        background-color: #b7c1d5;
+        color: #fff;
+      }
+    }
+  }
+}

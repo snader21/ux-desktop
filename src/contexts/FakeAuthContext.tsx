@@ -8,7 +8,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
-  login: (email: string, password: string) => void;
+  login: (email: string, password: string) => boolean;
   register: (email: string, password: string, confirmPassword: string) => void;
 }
 
@@ -16,7 +16,7 @@ interface AuthContextType {
 const defaultAuthContext: AuthContextType = {
   user: null,
   isAuthenticated: false,
-  login: () => {},
+  login: () => false,
   register: () => {},
 };
 
@@ -29,7 +29,9 @@ function FakeAuthProvider({ children }: { children: ReactNode }) {
   function login(email: string, password: string) {
     if (user && email === user.email && password === user.password) {
       setIsAuthenticated(true);
+      return true;
     }
+    return false;
   }
 
   function register(email: string, password: string, confirmPassword: string) {

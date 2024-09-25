@@ -8,7 +8,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate("/login");
+      navigate("/auth-providers", { replace: true });
     }
   }, [isAuthenticated, navigate]);
 
